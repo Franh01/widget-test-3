@@ -1,7 +1,8 @@
 import { createContext } from "react";
 import { useSocket } from "../hooks/useSocket";
 export const SocketContext = createContext();
-let url = import.meta.env.VITE_SOCKET_URL;
+let url = "";
+// let url = import.meta.env.VITE_SOCKET_URL;
 
 const SocketProvider = ({ children, userId }) => {
   const { socket, socketIsEnabled, updateSocketIsEnabled, socketIsOnline } =
