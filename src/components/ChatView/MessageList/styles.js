@@ -10,8 +10,9 @@ export const SX = {
     zIndex: "1",
   },
   messagesContainer: {
-    padding: "16px",
     paddingTop: "100px",
+    boxSizing: "border-box",
+    // padding: " 16px 0px 16px",
     display: "flex",
     flexDirection: "column",
     width: "400px",

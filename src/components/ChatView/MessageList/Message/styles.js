@@ -3,6 +3,7 @@ export const SX = {
     borderRadius: "8px 8px 0 8px",
     background: "#f1f3f8",
     padding: "16px",
+    marginRight: "16px",
     whiteSpace: "pre-line",
     wordBreak: "break-word",
     maxWidth: "240px",
