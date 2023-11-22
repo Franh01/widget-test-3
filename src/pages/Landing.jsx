@@ -4,7 +4,7 @@ import Section from "../components/Landing/Section";
 import Faq from "../components/Landing/FAQ";
 import Conversations from "../components/Landing/Conversations";
 import Settings from "../components/Landing/Settings";
-import CloseIcon from "../components/Landing/CloseIcon";
+// import CloseIcon from "../components/Landing/CloseIcon";
 
 const Landing = () => {
   return (
@@ -16,7 +16,7 @@ const Landing = () => {
         position: "relative",
       }}
     >
-      <CloseIcon />
+      {/* <CloseIcon /> */}
       <Header />
       <Section />
       <Faq />

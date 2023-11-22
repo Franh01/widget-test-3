@@ -17,21 +17,12 @@ function App() {
   const cookies = new Cookies(null, { path: "/" });
 
   cookies.set(
-    "session",
+    "widget_session",
     "eyJqd3QiOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKcFpDSTZJakV5TVRJeE1pSXNJbVZ0WVdsc0lqb2labkpoYm1OcGMyTnZRRzF2ZG1sbmIyOHVZMjl0SWl3aWRYTmxjbDlwWkNJNklqRXlNVEl4TWpFaUxDSnBZWFFpT2pFMk9Ua3dNak15TlROOS5pd1Y0aU9lRkhodFFYSHY5V3JKdDVpZDAtSkFObERyQkM5UE5TNjg0QjZZIiwiYWxnIjoiSFMyNTYifQ"
   );
 
   return (
-    <Box
-      sx={{
-        maxWidth: "400px",
-        minHeight: "100vh",
-        borderRadius: "8px",
-        overflow: "hidden",
-        background: "transparent",
-        position: "relative",
-      }}
-    >
+    <Box>
       <WidgetButton />
       <Snacks
         message={snackInfo.message}
@@ -40,7 +31,23 @@ function App() {
         closeSnack={closeSnack}
       />
 
-      {isWidgetOpen && <Outlet />}
+      <Box
+        sx={{
+          maxWidth: "400px",
+          height: "80vh",
+          borderRadius: "8px",
+          overflow: "hidden",
+          overflowY: "auto",
+          background: "#fefeff",
+          position: "absolute",
+          bottom: "84px",
+          right: "10px",
+          display: !isWidgetOpen && "none",
+          boxShadow: "0px 0px 1px 0px rgba(0,0,0,0.75)",
+        }}
+      >
+        {<Outlet />}
+      </Box>
     </Box>
   );
 }

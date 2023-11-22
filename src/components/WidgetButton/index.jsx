@@ -2,16 +2,15 @@ import { Box, Button } from "@mui/material";
 import { useWidgetContext } from "../../context/WidgetContext";
 
 const WidgetButton = () => {
-  const { changeWidgetState, isWidgetOpen } = useWidgetContext();
+  const { changeWidgetState } = useWidgetContext();
   return (
     <Button
       onClick={changeWidgetState}
       sx={{
         position: "fixed",
-        bottom: 1,
-        right: 1,
+        bottom: "10px",
+        right: "10px",
         zIndex: 1,
-        display: isWidgetOpen && "none",
         width: "64px",
         height: "64px",
         borderRadius: "100px",

@@ -2,7 +2,7 @@ import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import { IconButton, Typography } from "@mui/material";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import NotificationSoundSwitch from "./NotificationSoundSwitch";
 import LanguageSelector from "./LanguageSelector";
 import Button from "../../../../common/Button";
@@ -11,9 +11,10 @@ import { useTranslation } from "react-i18next";
 const BottomDrawer = () => {
   const [open, setOpen] = useState();
   const [tum] = useTranslation("user_menu");
+  const containerRef = useRef(null);
 
   return (
-    <Box>
+    <Box ref={containerRef}>
       <IconButton
         sx={{
           padding: "0",
@@ -22,7 +23,12 @@ const BottomDrawer = () => {
       >
         <SettingsOutlinedIcon />
       </IconButton>
-      <Drawer open={open} onClose={() => setOpen(false)} anchor="bottom">
+      <Drawer
+        open={open}
+        onClose={() => setOpen(false)}
+        anchor="bottom"
+        container={() => containerRef.current}
+      >
         <Box
           sx={{
             padding: "32px 16px 16px",
