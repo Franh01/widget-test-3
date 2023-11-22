@@ -37,7 +37,6 @@ function App() {
           height: "80vh",
           borderRadius: "8px",
           overflow: "hidden",
-          overflowY: "auto",
           background: "#fefeff",
           position: "absolute",
           bottom: "84px",

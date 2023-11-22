@@ -2,7 +2,7 @@ export const SX = {
   section: {
     display: "flex",
     position: "relative",
-    marginTop: "-80px",
+    marginTop: "-25px",
     flexDirection: "column",
   },
   animatedDiv: {

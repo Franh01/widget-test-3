@@ -14,6 +14,8 @@ const Landing = () => {
         display: "flex",
         flexDirection: "column",
         position: "relative",
+        overflowY: "auto",
+        height: "80vh",
       }}
     >
       {/* <CloseIcon /> */}

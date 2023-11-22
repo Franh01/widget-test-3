@@ -19,14 +19,14 @@ const Header = () => {
         gap: "10px",
         "@keyframes shrink": {
           "0%": {
-            height: "205px",
+            height: "130px",
           },
           "100%": {
             height: "80px",
           },
         },
         animation: "shrink 0.6s ease",
-        position: "fixed",
+        position: "absolute",
         borderRadius: "8px 8px 0px 0px",
         top: "0",
         zIndex: "2",

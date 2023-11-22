@@ -85,8 +85,8 @@ const MessageList = () => {
   }, []);
 
   return (
-    <Box sx={SX.mainContainer}>
-      <Box sx={SX.messagesContainer}>
+    <Box sx={SX.mainContainer} name="main_container">
+      <Box sx={SX.messagesContainer} name="messages_container">
         {messages.map((message, index) => {
           return (
             <Message

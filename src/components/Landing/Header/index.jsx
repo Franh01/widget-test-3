@@ -13,7 +13,7 @@ const Header = () => {
     <Box
       component={"header"}
       sx={{
-        height: "205px",
+        height: "130px",
         width: "100%",
         background: "#ffa35a",
         display: "flex",
