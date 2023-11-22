@@ -19,4 +19,8 @@ export default defineConfig({
     },
     rollupOptions: {},
   },
+  define: {
+    "process.env.NODE_ENV": JSON.stringify("production"),
+    "process.isNode": "false",
+  },
 });
